@@ -1,0 +1,18 @@
+((lambda ()
+  3))
+
+((lambda (a)
+    (a +))
+   (lambda (a) (a 2 3)))
+
+((lambda (a b c)
+    ((lambda (a) a) 4)
+    a)
+   7 7 7)
+
+((lambda (a b c d)
+    ((a) (b) (c) d))
+   (lambda () ((lambda (a) +) 1000))
+   (lambda () ((lambda (a b c d) (+ a d)) -2 5000 10000 3))
+   (lambda () ((lambda (d) (d)) (lambda () 10)))
+   100)
